@@ -831,6 +831,7 @@
                         <ColumnDefinition Width="8"/>
                         <ColumnDefinition Width="32"/>
                         <ColumnDefinition Width="28"/>
+                        <ColumnDefinition Width="4"/>
                         <ColumnDefinition Width="*" MinWidth="100"/>
                         <ColumnDefinition Width="32"/>
                         <ColumnDefinition Width="*" MinWidth="100"/>
@@ -845,11 +846,12 @@
                     <Button Name="CheckboxHeader" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" CornerRadius="4,0,0,4" BorderThickness="0" Padding="0">
                         <CheckBox Name="SelectAllCheckBox" Checked="SelectAllCheckBox_ValueChanged" Unchecked="SelectAllCheckBox_ValueChanged" Margin="12,4,4,4"/>
                     </Button>
-                    <Button Name="NameHeader" Grid.Column="3" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" CornerRadius="0" BorderThickness="0"/>
-                    <Button Name="IdHeader" Grid.Column="4" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" CornerRadius="0" BorderThickness="0"/>
-                    <Button Name="VersionHeader" Grid.Column="6" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" CornerRadius="0" BorderThickness="0"/>
-                    <Button Name="NewVersionHeader" Grid.Column="8" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" CornerRadius="0" BorderThickness="0" Visibility="{x:Bind RoleIsUpdateLike}"/>
-                    <Button Name="SourceHeader" Grid.Column="10" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" CornerRadius="0,4,4,0" BorderThickness="0"/>
+                    <Toolkit:GridSplitter Grid.Column="3" HorizontalAlignment="Left" Width="8" CornerRadius="2" Padding="-2,0,-2,0" Margin="0,1,0,1" />
+                    <Button Name="NameHeader" Grid.Column="4" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" CornerRadius="0" BorderThickness="0"/>
+                    <Button Name="IdHeader" Grid.Column="5" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" CornerRadius="0" BorderThickness="0"/>
+                    <Button Name="VersionHeader" Grid.Column="7" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" CornerRadius="0" BorderThickness="0"/>
+                    <Button Name="NewVersionHeader" Grid.Column="9" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" CornerRadius="0" BorderThickness="0" Visibility="{x:Bind RoleIsUpdateLike}"/>
+                    <Button Name="SourceHeader" Grid.Column="11" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" CornerRadius="0,4,4,0" BorderThickness="0"/>
                 </Grid>
 
                 <ItemsView x:Name="PackageList" x:FieldModifier="protected" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1"
